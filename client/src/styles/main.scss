@@ -1,0 +1,43 @@
+@import './variables';
+
+body {
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark {
+  background-color: #1a202c;
+  color: #f7fafc;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #2d3748;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.home-gradient-bg {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.home-gradient-bg::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(-45deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+// Add more global styles as needed
